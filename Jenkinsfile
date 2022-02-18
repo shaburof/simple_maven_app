@@ -5,7 +5,7 @@ pipeline {
       stage('build') {
         steps {
           withMaven(maven: 'Maven3') {
-		sh 'mvn clean install'
+		sh 'mvn clean install -DskipTests=true'
 	  }
         }
       }
